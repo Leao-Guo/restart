@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/payment-service/src/main/java/com/example/payment/service/AliPayServiceimpl">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/payment-service/src/main/java/com/example/payment/service/AliPayServiceimpl" />
+              <option name="originalContent" value="package com.example.payment.service;&#10;&#10;import com.example.payment.dto.ChannelPayResult;&#10;import com.example.payment.model.PayChannelType;&#10;import com.example.payment.model.Payment;&#10;import java.math.RoundingMode;&#10;import java.util.UUID;&#10;import org.springframework.beans.factory.annotation.Value;&#10;import org.springframework.stereotype.Service;&#10;&#10;@Service&#10;public class aliPayServiceimpl implements PaymentChannelService {&#10;  private final String gatewayUrl;&#10;&#10;  public aliPayServiceimpl(@Value(&quot;${payment.alipay.gateway-url:https://openapi.alipay.com/gateway.do}&quot;) String gatewayUrl) {&#10;    this.gatewayUrl = gatewayUrl;&#10;  }&#10;&#10;  @Override&#10;  public PayChannelType channel() {&#10;    return PayChannelType.ALIPAY;&#10;  }&#10;&#10;  @Override&#10;  public ChannelPayResult createOrder(Payment payment) {&#10;    String tradeNo = &quot;ALI&quot; + UUID.randomUUID().toString().replace(&quot;-&quot;, &quot;&quot;).substring(0, 24).toUpperCase();&#10;    String payUrl = gatewayUrl&#10;        + &quot;?out_trade_no=&quot; + payment.getOrderNo()&#10;        + &quot;&amp;total_amount=&quot; + payment.getAmount().setScale(2, RoundingMode.HALF_UP).toPlainString();&#10;    return ChannelPayResult.success(tradeNo, payUrl);&#10;  }&#10;}&#10;" />
+              <option name="updatedContent" value="package com.example.payment.service;&#10;&#10;import com.example.payment.dto.ChannelPayResult;&#10;import com.example.payment.model.PayChannelType;&#10;import com.example.payment.model.Payment;&#10;import java.math.RoundingMode;&#10;import java.util.UUID;&#10;import org.springframework.beans.factory.annotation.Value;&#10;import org.springframework.stereotype.Service;&#10;&#10;@Service&#10;public class AliPayServiceimpl implements PaymentChannelService {&#10;  private final String gatewayUrl;&#10;&#10;  public AliPayServiceimpl(@Value(&quot;${payment.alipay.gateway-url:https://openapi.alipay.com/gateway.do}&quot;) String gatewayUrl) {&#10;    this.gatewayUrl = gatewayUrl;&#10;  }&#10;&#10;  @Override&#10;  public PayChannelType channel() {&#10;    return PayChannelType.ALIPAY;&#10;  }&#10;&#10;  @Override&#10;  public ChannelPayResult createOrder(Payment payment) {&#10;    String tradeNo = &quot;ALI&quot; + UUID.randomUUID().toString().replace(&quot;-&quot;, &quot;&quot;).substring(0, 24).toUpperCase();&#10;    String payUrl = gatewayUrl&#10;        + &quot;?out_trade_no=&quot; + payment.getOrderNo()&#10;        + &quot;&amp;total_amount=&quot; + payment.getAmount().setScale(2, RoundingMode.HALF_UP).toPlainString();&#10;    return ChannelPayResult.success(tradeNo, payUrl);&#10;  }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

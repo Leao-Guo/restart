@@ -1,0 +1,14 @@
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\controller\PaymentController.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\dto\ChannelPayResult.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\dto\custom.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\dto\PaymentCreateRequest.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\dto\PaymentResponse.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\model\PayChannelType.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\model\Payment.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\model\PaymentStatus.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\PaymentApplication.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\repo\PaymentRepository.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\service\aliPayServiceimpl.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\service\PaymentChannelService.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\service\PaymentService.java
+D:\work\TestAI\springcloud-nacos-payment\payment-service\src\main\java\com\example\payment\service\WeChatPayServiceImpl.java
