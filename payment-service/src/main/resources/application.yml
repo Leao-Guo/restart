@@ -28,3 +28,10 @@ management:
     web:
       exposure:
         include: health,info
+
+payment:
+  alipay:
+    gateway-url: ${ALIPAY_GATEWAY_URL:https://openapi.alipay.com/gateway.do}
+  wechat:
+    unified-order-url: ${WECHAT_UNIFIED_ORDER_URL:https://api.mch.weixin.qq.com/v3/pay/transactions/native}
+

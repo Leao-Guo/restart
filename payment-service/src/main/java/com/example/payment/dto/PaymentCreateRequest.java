@@ -1,5 +1,6 @@
 ﻿package com.example.payment.dto;
 
+import com.example.payment.model.PayChannelType;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,6 +13,9 @@ public class PaymentCreateRequest {
   @NotNull
   @DecimalMin(value = "0.01")
   private BigDecimal amount;
+
+  @NotNull
+  private PayChannelType payChannel;
 
   public String getOrderNo() {
     return orderNo;
@@ -27,5 +31,13 @@ public class PaymentCreateRequest {
 
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
+  }
+
+  public PayChannelType getPayChannel() {
+    return payChannel;
+  }
+
+  public void setPayChannel(PayChannelType payChannel) {
+    this.payChannel = payChannel;
   }
 }

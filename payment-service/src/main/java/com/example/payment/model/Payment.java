@@ -26,8 +26,18 @@ public class Payment {
   private BigDecimal amount;
 
   @Enumerated(EnumType.STRING)
+  @Column(name = "pay_channel", nullable = false, length = 16)
+  private PayChannelType payChannel;
+
+  @Enumerated(EnumType.STRING)
   @Column(nullable = false, length = 16)
   private PaymentStatus status;
+
+  @Column(name = "channel_trade_no", length = 64)
+  private String channelTradeNo;
+
+  @Column(name = "pay_url", length = 512)
+  private String payUrl;
 
   @Column(name = "created_at", nullable = false)
   private Instant createdAt;
@@ -69,6 +79,30 @@ public class Payment {
 
   public void setStatus(PaymentStatus status) {
     this.status = status;
+  }
+
+  public PayChannelType getPayChannel() {
+    return payChannel;
+  }
+
+  public void setPayChannel(PayChannelType payChannel) {
+    this.payChannel = payChannel;
+  }
+
+  public String getChannelTradeNo() {
+    return channelTradeNo;
+  }
+
+  public void setChannelTradeNo(String channelTradeNo) {
+    this.channelTradeNo = channelTradeNo;
+  }
+
+  public String getPayUrl() {
+    return payUrl;
+  }
+
+  public void setPayUrl(String payUrl) {
+    this.payUrl = payUrl;
   }
 
   public Instant getCreatedAt() {
